@@ -13,7 +13,7 @@ function downloadModal(event, value1, value2) {
 	$('body').removeClass('mobile-menu-visible');
 	$('#exampleModal').modal('show'); 
 	console.log("downloadModal", event);
-	console.log9('exampleModal', event);
+	console.log('exampleModal', event);
 
 
 }
@@ -119,9 +119,6 @@ span.onclick = function() {
 				
 				emailType:3
 			} 
-			$('#subloader').removeClass('hideloader');
-			$('#subloader').addClass('displayloader');
-			$('#subloader').fadeIn();
 			$.ajax({
 				type:'post',
 				url:'xxxx',
@@ -143,6 +140,7 @@ span.onclick = function() {
 						$('#notice').addClass('hide-notice');
 			
 					}, 3000)
+					console.log("success");
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 				$('#subloader').removeClass('displayloader');
